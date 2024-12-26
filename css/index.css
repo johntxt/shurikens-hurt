@@ -85,7 +85,6 @@ body {
 
 .canvas {
   display: block;
-  background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
