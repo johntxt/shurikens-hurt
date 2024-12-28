@@ -1,21 +1,6 @@
-/* TODO: Finalize styles for all elements (e.g. game over result) */
+/* TODO: Finalize styles for all elements (e.g. game over result sizes/spacing, title/score sizes/spacing) */
 
-/* RESET & BASE STYLES */
-
-:root {
-  --bg-color-white: #fff;
-  --text-color: rgba(0, 0, 0, 0.75);
-  --text-color-soft: rgba(0, 0, 0, 0.4);
-
-  --game-bg-color: hsl(134, 14%, 23%);
-  --game-edge-color: hsl(134, 14%, calc(23% - 10%));
-  --game-title-color: #943333;
-
-  --modal-bg-color: rgba(0, 0, 0, 0.5);
-  --modal-edge-color: hsl(0, 0%, calc(100% - 20%));
-
-  /* TODO: Use CSS vars for select dimensions.... */
-}
+/* RESET */
 
 *,
 *::before,
@@ -25,8 +10,41 @@
 
 body {
   margin: 0;
+}
 
-  font-family: "Inter", sans-serif;
+/* BASE STYLES */
+
+:root {
+  /* color: general */
+  --bg-color--white: #fff;
+  --text-color: rgba(0, 0, 0, 0.75);
+  --text-color--soft: rgba(0, 0, 0, 0.4);
+
+  /* color: game */
+  --game-bg-color: hsl(134, 14%, 23%);
+  --game-edge-color: hsl(134, 14%, calc(23% - 10%));
+  --game-title-color: #943333;
+
+  /* color: modal */
+  --modal-bg-color: rgba(0, 0, 0, 0.5);
+  --modal-edge-color: hsl(0, 0%, calc(100% - 20%));
+
+  /* dimension: general */
+  --edge-height: 6px;
+  --border-radius: 16px;
+
+  /* font: general */
+  --font-family: "Inter", sans-serif;
+  --font-size: 14px;
+  --font-size--h1: 32px;
+  --font-size--h2: 26px;
+  --font-weight: 500;
+  --font-weight--bold: 700;
+  --line-height: 1.5;
+}
+
+body {
+  font-family: var(--font-family);
   font-optical-sizing: auto;
 }
 
@@ -54,7 +72,7 @@ a {
   margin: 0;
   display: block;
   color: var(--text-color);
-  font-weight: 700;
+  font-weight: var(--font-weight--bold);
   text-align: center;
   z-index: 1;
   visibility: hidden;
@@ -62,14 +80,14 @@ a {
 
 .game__title {
   top: 22%;
-  font-size: 26px;
+  font-size: var(--font-size--h1);
   color: var(--game-title-color);
 }
 
 .game__score,
 .game__result {
   top: 22%;
-  font-size: 26px;
+  font-size: var(--font-size--h2);
 }
 
 .game__result {
@@ -81,9 +99,11 @@ a {
 
 .game__result-score-label,
 .game__result-best-label {
-  font-size: 14px;
-  color: var(--text-color-soft);
+  font-size: var(--font-size);
+  color: var(--text-color--soft);
 }
+
+/* TODO: should appear only after bunny lands */
 
 .game__start-hint,
 .game__reset-hint {
@@ -94,17 +114,17 @@ a {
   display: block;
   margin: 0;
   padding: 4px 8px;
-  border-radius: 16px 16px 16px 0;
-  background-color: var(--bg-color-white);
+  border-radius: var(--border-radius) var(--border-radius) var(--border-radius) 0;
+  background-color: var(--bg-color--white);
   color: var(--text-color);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight--bold);
   text-align: center;
   z-index: 1;
   visibility: hidden;
 }
 
-.canvas {
+.game__canvas {
   display: block;
   background-repeat: no-repeat;
   background-position: center center;
@@ -112,7 +132,7 @@ a {
   visibility: hidden;
 }
 
-/* INFO BUTTON & MODAL */
+/* INFO BUTTON */
 
 .info-button {
   position: absolute;
@@ -120,11 +140,11 @@ a {
   right: 0;
   padding: 8px;
   border: none;
-  border-radius: 0 0 0 20px;
-  background-color: var(--bg-color-white);
+  border-radius: 0 0 0 var(--border-radius);
+  background-color: var(--bg-color--white);
   color: var(--text-color);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight--bold);
   display: grid;
   grid-template-columns: auto auto;
   gap: 4px;
@@ -141,6 +161,10 @@ a {
 .info-button__text {
   padding: 1px 0;
 }
+
+/* INFO MODAL */
+
+/* TODO: Blur background when modal open */
 
 .info-modal {
   position: fixed;
@@ -159,34 +183,35 @@ a {
 
 .info-modal__card {
   max-width: 320px;
-  background-color: var(--bg-color-white);
-  padding: 16px 32px;
-  border-radius: 16px;
-  box-shadow: 0 6px 0 var(--modal-edge-color);
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
+  background-color: var(--bg-color--white);
+  padding: 32px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 var(--edge-height) 0 var(--modal-edge-color);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
   color: var(--text-color);
   cursor: default;
 }
 
 .info-modal__header {
   text-align: center;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .info-modal__decoration {
   display: inline-block;
-  width: 112px;
-  height: 40px;
-  background-image: url('../img/enemy-1.png'), url('../img/enemy-2.png'), url('../img/enemy-1.png');
+  width: 94px;
+  height: 24px;
+  background-image: url('../img/enemy-1.png'), url('../img/enemy-1.png'), url('../img/enemy-1.png');
   background-position: left, center, right;
   background-size: 24px 24px, 24px 24px, 24px 24px;
   background-repeat: no-repeat;
 }
 
 .info-modal__footer {
-  color: var(--text-color-soft);
+  color: var(--text-color--soft);
   text-align: center;
   margin-top: 48px;
 }
@@ -194,8 +219,8 @@ a {
 /* DESKTOP STYLES */
 
 @media (min-aspect-ratio: 1/1) and (min-width: 900px) {
-  .canvas {
-    border-radius: 16px;
-    box-shadow: 0 6px 0 var(--game-edge-color);
+  .game__canvas {
+    border-radius: var(--border-radius);
+    box-shadow: 0 var(--edge-height) 0 var(--game-edge-color);
   }
 }
