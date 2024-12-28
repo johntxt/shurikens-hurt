@@ -103,7 +103,6 @@ a {
   color: var(--text-color--soft);
 }
 
-/* TODO: should appear only after bunny lands */
 /* TODO: needs to be anchored to bunny */
 
 .game__start-hint,
