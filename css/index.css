@@ -1,4 +1,7 @@
-/* RESET  */
+/* TODO: Use BEM or something.... */
+/* TODO: Use CSS vars.... */
+
+/* RESET & BASE STYLES */
 
 *,
 *::before,
@@ -11,6 +14,10 @@ body {
 
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
+}
+
+a {
+  color: inherit;
 }
 
 /* GAME ELEMENTS */
@@ -91,11 +98,91 @@ body {
   visibility: hidden;
 }
 
+/* INFO BUTTON & MODAL */
+
+.info-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  border: none;
+  border-radius: 0 0 0 20px;
+  background: #fff;
+  color: #444;
+  font-size: 14px;
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.info-button-icon {
+  padding: 9px;
+  background-image: url("../img/snack.png");
+  background-size: contain;
+}
+
+.info-button-label {
+  padding: 1px 0;
+}
+
+.info-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.info-modal-content {
+  max-width: 320px;
+  background: #fff;
+  padding: 16px 32px;
+  border-radius: 16px;
+  box-shadow: 0 6px 0 #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #333;
+  cursor: default;
+}
+
+.info-modal-content-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.info-modal-content-header-icons {
+  display: inline-block;
+  width: 112px;
+  height: 40px;
+  background-image: url('../img/enemy-1.png'), url('../img/enemy-2.png'), url('../img/enemy-1.png');
+  background-position: left, center, right;
+  background-size: 24px 24px, 24px 24px, 24px 24px;
+  background-repeat: no-repeat;
+}
+
+.info-modal-content-footer {
+  opacity: 0.5;
+  text-align: center;
+  margin-top: 48px;
+}
+
 /* DESKTOP STYLES */
 
 @media (min-aspect-ratio: 1/1) and (min-width: 900px) {
   .canvas {
     border-radius: 16px;
+    /* TODO: use non-alpha color if appropriate */
     box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
   }
 }

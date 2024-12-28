@@ -24,6 +24,7 @@
 </head>
 
 <body>
+  <!-- TODO: Should this be called 'app' e.g. if it's not the root? -->
   <div class="app">
     <h1 class="home-title">Shurikens Hurt</h1>
     <h2 class="game-score">0</h2>
@@ -37,9 +38,31 @@
         <div class="game-over-high-score"></div>
       </div>
     </h2>
+    <!-- TODO: Shouldn't these be <p>? -->
     <h2 class="home-hint">tap to play</h2>
     <h2 class="game-over-hint">try again?</h2>
     <canvas class="canvas"></canvas>
+  </div>
+  <button class="info-button">
+    <div class="info-button-icon"></div>
+    <div class="info-button-label">About</div>
+  </button>
+  <div class="info-modal">
+    <div class="info-modal-content">
+      <div class="info-modal-content-header">
+        <div class="info-modal-content-header-icons"></div>
+      </div>
+      <p>
+        A hungry bunny is trapped in a ninja's garden, surrounded by carrots... AND DEADLY SHURIKENS.
+        Chomp every carrot and dodge every shuriken that comes your way!
+      </p>
+      <p>
+        Consider <a href="https://buymeacoffee.com/johnchinjew" target="_blank">donating</a>, it means a lot!
+      </p>
+      <p class="info-modal-content-footer">
+        Created by <a href="https://jawnyawns.github.io" target="_blank">John Chin-Jew</a>
+      </p>
+    </div>
   </div>
   <script src="./js/index.js" type="module"></script>
 </body>
