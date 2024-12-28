@@ -164,8 +164,6 @@ a {
 
 /* INFO MODAL */
 
-/* TODO: Blur background when modal open */
-
 .info-modal {
   position: fixed;
   top: 0;
