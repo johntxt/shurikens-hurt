@@ -104,6 +104,7 @@ a {
 }
 
 /* TODO: should appear only after bunny lands */
+/* TODO: needs to be anchored to bunny */
 
 .game__start-hint,
 .game__reset-hint {
