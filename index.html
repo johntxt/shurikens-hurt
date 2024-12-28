@@ -24,33 +24,34 @@
 </head>
 
 <body>
-  <!-- TODO: Should this be called 'app' e.g. if it's not the root? -->
-  <div class="app">
-    <h1 class="home-title">Shurikens Hurt</h1>
-    <h2 class="game-score">0</h2>
-    <h2 class="game-over-result">
+  <!-- TODO: Best way to manage the different "states" of game in CSS and JS?
+             Better to have persistent elements and modify content in js? etc etc -->
+  <div class="game">
+    <h1 class="game__title">Shurikens Hurt</h1>
+    <h2 class="game__score">0</h2>
+    <h2 class="game__result">
       <div>
-        <div class="game-over-score-label">Score</div>
-        <div class="game-over-score"></div>
+        <div class="game__result-score-label">Score</div>
+        <div class="game__result-score"></div>
       </div>
       <div>
-        <div class="game-over-high-score-label">Best</div>
-        <div class="game-over-high-score"></div>
+        <div class="game__result-best-label">Best</div>
+        <div class="game__result-best"></div>
       </div>
     </h2>
-    <!-- TODO: Shouldn't these be <p>? -->
-    <h2 class="home-hint">tap to play</h2>
-    <h2 class="game-over-hint">try again?</h2>
+    <!-- TODO: tweak hint copy -->
+    <p class="game__start-hint">tap to play</p>
+    <p class="game__reset-hint">try again?</p>
     <canvas class="canvas"></canvas>
   </div>
   <button class="info-button">
-    <div class="info-button-icon"></div>
-    <div class="info-button-label">About</div>
+    <div class="info-button__icon"></div>
+    <div class="info-button__text">About</div>
   </button>
   <div class="info-modal">
-    <div class="info-modal-content">
-      <div class="info-modal-content-header">
-        <div class="info-modal-content-header-icons"></div>
+    <div class="info-modal__card">
+      <div class="info-modal__header">
+        <div class="info-modal__decoration"></div>
       </div>
       <p>
         A hungry bunny is trapped in a ninja's garden, surrounded by carrots... AND DEADLY SHURIKENS.
@@ -59,7 +60,7 @@
       <p>
         Consider <a href="https://buymeacoffee.com/johnchinjew" target="_blank">donating</a>, it means a lot!
       </p>
-      <p class="info-modal-content-footer">
+      <p class="info-modal__footer">
         Created by <a href="https://jawnyawns.github.io" target="_blank">John Chin-Jew</a>
       </p>
     </div>

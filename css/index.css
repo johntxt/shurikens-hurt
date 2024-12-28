@@ -1,5 +1,5 @@
-/* TODO: Use BEM or something.... */
 /* TODO: Use CSS vars.... */
+/* TODO: Finalize styles for all elements (e.g. game over result) */
 
 /* RESET & BASE STYLES */
 
@@ -22,7 +22,7 @@ a {
 
 /* GAME ELEMENTS */
 
-.app {
+.game {
   display: grid;
   place-items: center;
   position: fixed;
@@ -33,9 +33,9 @@ a {
   background: #334437;
 }
 
-.home-title,
-.game-score,
-.game-over-result {
+.game__title,
+.game__score,
+.game__result {
   position: absolute;
   margin: 0;
   display: block;
@@ -46,33 +46,33 @@ a {
   visibility: hidden;
 }
 
-.home-title {
+.game__title {
   top: 22%;
   font-size: 26px;
   color: #943333;
 }
 
-.game-score,
-.game-over-result {
+.game__score,
+.game__result {
   top: 22%;
   font-size: 26px;
 }
 
-.game-over-result {
+.game__result {
   display: flex;
   justify-content: center;
   gap: 32px;
   text-align: center;
 }
 
-.game-over-score-label,
-.game-over-high-score-label {
+.game__result-score-label,
+.game__result-best-label {
   font-size: 14px;
   color: #6C8A92;
 }
 
-.home-hint,
-.game-over-hint {
+.game__start-hint,
+.game__reset-hint {
   position: absolute;
   top: calc(50% + 60px);
   left: calc(50% + 76px);
@@ -118,13 +118,13 @@ a {
   visibility: hidden;
 }
 
-.info-button-icon {
+.info-button__icon {
   padding: 9px;
   background-image: url("../img/snack.png");
   background-size: contain;
 }
 
-.info-button-label {
+.info-button__text {
   padding: 1px 0;
 }
 
@@ -143,7 +143,7 @@ a {
   visibility: hidden;
 }
 
-.info-modal-content {
+.info-modal__card {
   max-width: 320px;
   background: #fff;
   padding: 16px 32px;
@@ -156,12 +156,12 @@ a {
   cursor: default;
 }
 
-.info-modal-content-header {
+.info-modal__header {
   text-align: center;
   margin-bottom: 24px;
 }
 
-.info-modal-content-header-icons {
+.info-modal__decoration {
   display: inline-block;
   width: 112px;
   height: 40px;
@@ -171,7 +171,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.info-modal-content-footer {
+.info-modal__footer {
   opacity: 0.5;
   text-align: center;
   margin-top: 48px;
