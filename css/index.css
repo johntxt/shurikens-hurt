@@ -8,6 +8,9 @@
 
 body {
   margin: 0;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  color: var(--text-color)
 }
 
 /* BASE STYLES */
@@ -51,6 +54,35 @@ body {
 
 a {
   color: inherit;
+}
+
+/* LOADING SCREEN */
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.loading__icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/snack.png");
+  background-size: contain;
+  animation: spin 1.25s infinite linear;
+}
+
+.loading--completed {
+  transform: translateY(-110vh);
+  transition: all 500ms;
 }
 
 /* GAME ELEMENTS */
@@ -254,5 +286,11 @@ a {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
