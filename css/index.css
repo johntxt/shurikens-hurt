@@ -56,6 +56,11 @@ a {
   color: inherit;
 }
 
+button {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
 /* LOADING SCREEN */
 
 .loading {
@@ -137,7 +142,6 @@ a {
 
 .game__result-score-label,
 .game__result-best-label {
-  font-size: var(--font-size);
   color: var(--text-color--soft);
   padding-bottom: 4px;
 }
@@ -151,7 +155,6 @@ a {
   border-radius: var(--border-radius) var(--border-radius) var(--border-radius) 0;
   background-color: var(--white);
   color: var(--text-color);
-  font-size: var(--font-size);
   font-weight: var(--font-weight--bold);
   text-align: center;
   z-index: 1;
@@ -182,7 +185,6 @@ a {
   border-radius: 0 0 0 var(--border-radius);
   background-color: var(--white);
   color: var(--text-color);
-  font-size: var(--font-size);
   font-weight: var(--font-weight--bold);
   display: grid;
   grid-template-columns: auto auto;
@@ -225,7 +227,6 @@ a {
   padding: 32px;
   border-radius: var(--border-radius);
   box-shadow: 0 var(--edge-height) 0 var(--modal-edge-color);
-  font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
   color: var(--text-color);
