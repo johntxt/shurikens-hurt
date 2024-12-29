@@ -82,7 +82,7 @@ a {
 
 .loading--completed {
   transform: translateY(-110vh);
-  transition: all 500ms;
+  transition: all 800ms;
 }
 
 /* GAME ELEMENTS */
