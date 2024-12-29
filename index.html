@@ -27,21 +27,23 @@
   <!-- TODO: Best way to manage the different "states" of game in CSS and JS?
              Better to have persistent elements and modify content in js? etc etc -->
   <div class="game">
-    <h1 class="game__title">Shurikens Hurt</h1>
-    <h2 class="game__score">0</h2>
-    <h2 class="game__result">
-      <div>
-        <div class="game__result-score-label">Score</div>
-        <div class="game__result-score"></div>
-      </div>
-      <div>
-        <div class="game__result-best-label">Best</div>
-        <div class="game__result-best"></div>
-      </div>
-    </h2>
-    <p class="game__start-hint">tap to jump</p>
-    <p class="game__reset-hint">try again?</p>
-    <canvas class="game__canvas"></canvas>
+    <div class="game__container">
+      <h1 class="game__title">Shurikens Hurt</h1>
+      <h2 class="game__score">0</h2>
+      <h2 class="game__result">
+        <div>
+          <div class="game__result-score-label">Score</div>
+          <div class="game__result-score"></div>
+        </div>
+        <div>
+          <div class="game__result-best-label">Best</div>
+          <div class="game__result-best"></div>
+        </div>
+      </h2>
+      <p class="game__start-hint">tap to jump</p>
+      <p class="game__reset-hint">try again?</p>
+      <canvas class="game__canvas"></canvas>
+    </div>
   </div>
   <button class="info-button">
     <div class="info-button__icon"></div>

@@ -76,6 +76,7 @@ a {
   text-align: center;
   z-index: 1;
   visibility: hidden;
+  width: 100%;
 }
 
 .game__title {
@@ -103,14 +104,9 @@ a {
   color: var(--text-color--soft);
 }
 
-/* TODO: needs to be anchored to bunny */
-
 .game__start-hint,
 .game__reset-hint {
   position: absolute;
-  top: calc(50% + 60px);
-  left: calc(50% + 76px);
-  transform: translate(-50%, -50%);
   display: block;
   margin: 0;
   padding: 4px 8px;
@@ -122,6 +118,10 @@ a {
   text-align: center;
   z-index: 1;
   visibility: hidden;
+}
+
+.game__container {
+  position: relative;
 }
 
 .game__canvas {
