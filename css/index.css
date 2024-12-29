@@ -107,7 +107,7 @@ a {
 .game__result-best-label {
   font-size: var(--font-size);
   color: var(--text-color--soft);
-  padding-bottom: 2px;
+  padding-bottom: 4px;
 }
 
 .game__start-hint,
