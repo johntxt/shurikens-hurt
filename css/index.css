@@ -159,7 +159,6 @@ button {
   text-align: center;
   z-index: 1;
   visibility: hidden;
-  animation: shrug 4s infinite;
 }
 
 .game__container {
@@ -191,7 +190,6 @@ button {
   gap: 4px;
   cursor: pointer;
   visibility: hidden;
-  animation: shrug 4s infinite;
 }
 
 .info-button__icon {
@@ -272,9 +270,46 @@ button {
 
 /* ANIMATIONS */
 
-@keyframes shrug {
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spawn-and-shrug-bubble {
+  animation: spawn-bubble 350ms forwards, shrug-bubble 4s infinite;
+  /* delay the shrug animation until spawn finishes */
+  animation-delay: 0s, 350ms;
+}
+
+@keyframes spawn-bubble {
+  0% {
+    transform: translateY(8px);
+    opacity: 0.6;
+  }
+
+  60% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shrug-bubble {
   0% {
     transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+
+  85% {
+    transform: translateY(-8px);
   }
 
   90% {
@@ -282,16 +317,10 @@ button {
   }
 
   95% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 
   100% {
     transform: translateY(0);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
   }
 }
