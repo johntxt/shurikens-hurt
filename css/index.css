@@ -167,10 +167,52 @@ button {
 
 .game__canvas {
   display: block;
+  background-image: url("../img/background-1.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
   visibility: hidden;
+}
+
+.game__canvas-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  z-index: -1;
+}
+
+.game__canvas-container--bg-0::after {
+  background-image: url("../img/background-0.png");
+  opacity: 0;
+  animation: 1s fade-in 1s forwards;
+  z-index: 0;
+}
+
+.game__canvas-container--bg-1::after {
+  background-image: url("../img/background-1.png");
+  opacity: 0;
+  animation: 1s fade-in 1s forwards;
+  z-index: 0;
+}
+
+.game__canvas-container--bg-2::after {
+  background-image: url("../img/background-2.png");
+  opacity: 0;
+  animation: 1s fade-in 1s forwards;
+  z-index: 0;
+}
+
+.game__canvas-container--bg-3::after {
+  background-image: url("../img/background-3.png");
+  opacity: 0;
+  animation: 1s fade-in 1s forwards;
+  z-index: 0;
 }
 
 /* INFO BUTTON */
@@ -256,6 +298,10 @@ button {
 /* DESKTOP STYLES */
 
 @media (min-aspect-ratio: 1/1) and (min-width: 900px) {
+  .game__canvas-container::after {
+    border-radius: var(--border-radius);
+  }
+
   .game__canvas {
     border-radius: var(--border-radius);
     box-shadow: 0 var(--edge-height) 0 var(--game-edge-color);
@@ -322,5 +368,15 @@ button {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
