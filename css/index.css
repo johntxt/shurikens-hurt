@@ -36,7 +36,6 @@ body {
   /* font: general */
   --font-family: "Inter", sans-serif;
   --font-size: 14px;
-  --font-size--h1: 38px;
   --font-size--h2: 24px;
   --font-weight: 500;
   --font-weight--bold: 700;
@@ -119,10 +118,19 @@ button {
 }
 
 .game__title {
-  font-size: var(--font-size--h1);
   color: var(--white);
   font-weight: var(--font-weight--black);
   text-shadow: 0 3px 0 var(--title-edge-color);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.game__title-first-line {
+  font-size: 28px;
+}
+
+.game__title-second-line {
+  font-size: 84px;
 }
 
 .game__score,
