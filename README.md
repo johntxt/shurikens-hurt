@@ -7,7 +7,7 @@ Play now! → [Shurikens Hurt](https://shurikenshurt.com/)
 
 ## Report a problem
 
-If you encounter a problem while playing, please let me know by messaging me on Instagram: [@jawnyawns](https://www.instagram.com/jawnyawns/). I will try to fix the problem ASAP!
+If you encounter a problem while playing, please let me know by messaging me on Instagram: [@jcj.xyz](https://www.instagram.com/jcj.xyz/). I will try to fix the problem ASAP!
 
 ## Donate
 
@@ -15,4 +15,4 @@ Please consider [donating](https://buymeacoffee.com/johnchinjew) to support my g
 
 ---
 
-© [John Chin-Jew](https://jawnyawns.github.io/). All rights reserved.
+© [John Chin-Jew](https://johntxt.github.io/). All rights reserved.
