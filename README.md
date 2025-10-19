@@ -7,7 +7,7 @@ Play now! → [Shurikens Hurt](https://shurikenshurt.com/)
 
 ## Report a problem
 
-If you encounter a problem while playing, please let me know by messaging me on Instagram: [@jcj.xyz](https://www.instagram.com/jcj.xyz/). I will try to fix the problem ASAP!
+If you encounter a problem while playing, please let me know by messaging me on Instagram: [@johnchinjew](https://www.instagram.com/johnchinjew/). I will try to fix the problem ASAP!
 
 ## Donate
 
