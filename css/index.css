@@ -81,6 +81,7 @@ button {
   height: 24px;
   background-image: url("../img/snack.png");
   background-size: contain;
+  background-repeat: no-repeat;
   animation: spin 1.25s infinite linear;
 }
 
@@ -250,6 +251,7 @@ button {
   padding: 9px;
   background-image: url("../img/snack.png");
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .info-button__text {
