@@ -119,19 +119,22 @@ button {
 
 .game__title {
   color: var(--white);
+  font-family: "Chango", sans-serif;
   font-weight: var(--font-weight--black);
-  text-shadow: 0 3px 0 var(--title-edge-color);
   text-transform: uppercase;
   line-height: 1;
 }
 
 .game__title-first-line {
-  font-size: 26px;
-  letter-spacing: 2px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 0 var(--title-edge-color);
 }
 
 .game__title-second-line {
-  font-size: 80px;
+  font-size: 74px;
+  letter-spacing: -2px;
+  text-shadow: 0 6px 0 var(--title-edge-color);
 }
 
 .game__score,
