@@ -1,6 +1,6 @@
 # Shurikens Hurt
 
-A hungry bunny is trapped in a ninja's garden, surrounded by carrots... AND DEADLY SHURIKENS.
+A hungry bunny is trapped in a ninja's garden, surrounded by carrots... and deadly shurikens.
 Chomp every carrot and dodge every shuriken that comes your way!
 
 Play now! → [Shurikens Hurt](https://shurikenshurt.com/)
