@@ -22,9 +22,6 @@ body {
   --game-bg-color: hsl(134, 14%, 23%);
   --game-edge-color: hsl(134, 14%, calc(23% - 10%));
 
-  /* color: title */
-  --title-edge-color: #943333;
-
   /* color: modal */
   --modal-bg-color: rgba(0, 0, 0, 0.75);
 
@@ -38,7 +35,6 @@ body {
   --font-size--h2: 24px;
   --font-weight: 500;
   --font-weight--bold: 700;
-  --font-weight--black: 900;
   --line-height: 1.5;
 }
 
@@ -118,23 +114,11 @@ button {
 }
 
 .game__title {
-  color: var(--white);
-  font-family: "Chango", sans-serif;
-  font-weight: var(--font-weight--black);
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.game__title-first-line {
-  font-size: 24px;
-  letter-spacing: 1px;
-  text-shadow: 0 4px 0 var(--title-edge-color);
-}
-
-.game__title-second-line {
-  font-size: 74px;
-  letter-spacing: -2px;
-  text-shadow: 0 6px 0 var(--title-edge-color);
+  left: 50%;
+  width: 82%;
+  max-width: 322px;
+  height: auto;
+  transform: translateX(-50%);
 }
 
 .game__score,
