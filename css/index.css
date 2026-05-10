@@ -26,8 +26,7 @@ body {
   --title-edge-color: #943333;
 
   /* color: modal */
-  --modal-bg-color: rgba(0, 0, 0, 0.5);
-  --modal-edge-color: hsl(0, 0%, calc(100% - 20%));
+  --modal-bg-color: rgba(0, 0, 0, 0.75);
 
   /* dimension: general */
   --edge-height: 6px;
@@ -280,33 +279,16 @@ button {
   background-color: var(--white);
   padding: 32px;
   border-radius: var(--border-radius);
-  box-shadow: 0 var(--edge-height) 0 var(--modal-edge-color);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
   color: var(--text-color);
   cursor: default;
 }
 
-.info-modal__header {
-  text-align: center;
-  margin-top: 16px;
-  margin-bottom: 32px;
-}
-
-.info-modal__decoration {
-  display: inline-block;
-  width: 94px;
-  height: 24px;
-  background-image: url('../img/enemy-1.png'), url('../img/enemy-1.png'), url('../img/enemy-1.png');
-  background-position: left, center, right;
-  background-size: 24px 24px, 24px 24px, 24px 24px;
-  background-repeat: no-repeat;
-}
-
 .info-modal__footer {
   color: var(--text-color--soft);
   text-align: center;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 /* DESKTOP STYLES */
