@@ -204,13 +204,6 @@ button {
   z-index: 0;
 }
 
-.game__canvas-container--bg-3::after {
-  background-image: url("../img/background-3.png");
-  opacity: 0;
-  animation: 1s fade-in 1s forwards;
-  z-index: 0;
-}
-
 /* INFO BUTTON */
 
 .info-button {
